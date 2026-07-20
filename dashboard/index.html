@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Prep & SRS Dashboard | Big Tech Target</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">⚡</div>
+                <div>
+                    <h1 class="brand-title">DSA Prep OS</h1>
+                    <span class="brand-tag">MAANG System</span>
+                </div>
+            </div>
+
+            <!-- Profile Summary Badge -->
+            <div class="user-card">
+                <div class="avatar-ring">
+                    <div class="avatar">VD</div>
+                </div>
+                <div class="user-info">
+                    <h3 class="user-name">@vivekdas2023</h3>
+                    <span class="user-role">C++ • Big Tech Target</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#overview" class="nav-item active"><span class="nav-icon">📊</span> Overview</a>
+                <a href="#leetcode" class="nav-item"><span class="nav-icon">🏆</span> LeetCode Stats</a>
+                <a href="#problems" class="nav-item"><span class="nav-icon">📚</span> SRS Problems Matrix</a>
+                <a href="#cheatsheet" class="nav-item"><span class="nav-icon">🧠</span> C++ Cheat Sheet</a>
+            </nav>
+
+            <div class="srs-status-box">
+                <div class="srs-status-title">SRS Status</div>
+                <div class="srs-status-val" id="overdue-count-badge">0 Due Today</div>
+                <p class="srs-status-sub">Spaced Repetition active</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header Bar -->
+            <header class="top-header">
+                <div>
+                    <h2 class="page-title">Big Tech DSA Dashboard</h2>
+                    <p class="page-subtitle">Track problems, prevent pattern decay, and crush technical interviews.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="btn-sync">🔄 Sync LeetCode</button>
+                    <button class="btn btn-primary" id="btn-practice">🚀 Start Session (/start)</button>
+                </div>
+            </header>
+
+            <!-- Key Metrics Grid -->
+            <section class="stats-grid" id="overview">
+                <!-- LeetCode Total Card -->
+                <div class="stat-card glass-card gold-glow">
+                    <div class="stat-header">
+                        <span class="stat-label">LeetCode Total Solved</span>
+                        <span class="stat-icon">🏆</span>
+                    </div>
+                    <div class="stat-value" id="lc-total-solved">479</div>
+                    <div class="stat-footer">Global Rank <strong id="lc-ranking">#217,972</strong></div>
+                </div>
+
+                <!-- Difficulty Breakdown -->
+                <div class="stat-card glass-card">
+                    <div class="stat-header">
+                        <span class="stat-label">Difficulty Distribution</span>
+                        <span class="stat-icon">🎯</span>
+                    </div>
+                    <div class="difficulty-pills">
+                        <span class="pill easy">Easy: <strong id="lc-easy">134</strong></span>
+                        <span class="pill medium">Medium: <strong id="lc-medium">266</strong></span>
+                        <span class="pill hard">Hard: <strong id="lc-hard">79</strong></span>
+                    </div>
+                    <div class="stat-footer">266 Mediums & 79 Hards</div>
+                </div>
+
+                <!-- Tracked SRS Cards -->
+                <div class="stat-card glass-card cyan-glow">
+                    <div class="stat-header">
+                        <span class="stat-label">SRS Tracked Patterns</span>
+                        <span class="stat-icon">🔄</span>
+                    </div>
+                    <div class="stat-value" id="srs-tracked-count">13</div>
+                    <div class="stat-footer"><span id="srs-graduated">0</span> Graduated Cards</div>
+                </div>
+
+                <!-- Overdue Alert -->
+                <div class="stat-card glass-card purple-glow">
+                    <div class="stat-header">
+                        <span class="stat-label">Overdue Reviews</span>
+                        <span class="stat-icon">🚨</span>
+                    </div>
+                    <div class="stat-value text-green" id="overdue-hero-val">0</div>
+                    <div class="stat-footer">Anki Spaced Repetition</div>
+                </div>
+            </section>
+
+            <!-- Stage Distribution & Topic Breakdown -->
+            <section class="grid-2col">
+                <div class="glass-card">
+                    <h3 class="card-title">SRS Stage Distribution (Anki Engine)</h3>
+                    <div class="stage-bars" id="stage-bars-container">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <h3 class="card-title">Topic Coverage Matrix</h3>
+                    <div class="topic-grid" id="topic-matrix-container">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filterable Problem Matrix Table -->
+            <section class="glass-card mt-24" id="problems">
+                <div class="table-header">
+                    <div>
+                        <h3 class="card-title">SRS Problem Matrix & Pattern Cards</h3>
+                        <p class="card-sub">Stateful tracking of C++ solutions, mental model notes, and review schedules.</p>
+                    </div>
+                    <div class="filter-controls">
+                        <input type="text" id="search-input" class="search-box" placeholder="Search problems or tags...">
+                        <select id="filter-difficulty" class="select-box">
+                            <option value="all">All Difficulties</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                        <select id="filter-stage" class="select-box">
+                            <option value="all">All SRS Stages</option>
+                            <option value="1">Stage 1 (1d)</option>
+                            <option value="2">Stage 2 (3d)</option>
+                            <option value="3">Stage 3 (7d)</option>
+                            <option value="4">Stage 4 (14d)</option>
+                            <option value="5">Stage 5 (30d)</option>
+                            <option value="6">Stage 6 (Graduated)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Problem Title</th>
+                                <th>Difficulty</th>
+                                <th>Topic Category</th>
+                                <th>Target Companies</th>
+                                <th>SRS Stage</th>
+                                <th>Review Date</th>
+                                <th>Last Rating</th>
+                                <th>Files</th>
+                            </tr>
+                        </thead>
+                        <tbody id="problems-tbody">
+                            <!-- Rendered dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

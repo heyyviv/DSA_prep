@@ -1,0 +1,302 @@
+{
+  "last_updated": "2026-07-20",
+  "problems": [
+    {
+      "slug": "two_sum",
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "topic": "01_arrays_and_hashing",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/01_arrays_and_hashing/two_sum.cpp",
+      "note_file": "notes/two_sum-solved.md"
+    },
+    {
+      "slug": "course_schedule",
+      "title": "Course Schedule",
+      "difficulty": "Medium",
+      "topic": "10_graphs",
+      "companies": [
+        "Meta",
+        "Amazon",
+        "Google"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/10_graphs/course_schedule.cpp",
+      "note_file": "notes/course_schedule-solved.md"
+    },
+    {
+      "slug": "nested_list_weight_sum_ii",
+      "title": "Nested List Weight Sum II",
+      "difficulty": "Medium",
+      "topic": "07_trees",
+      "companies": [
+        "LinkedIn",
+        "Meta"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/07_trees/nested_list_weight_sum_ii.cpp",
+      "note_file": "notes/nested_list_weight_sum_ii-solved.md"
+    },
+    {
+      "slug": "string_to_integer_(atoi)",
+      "title": "String to Integer (atoi)",
+      "difficulty": "Medium",
+      "topic": "01_arrays_and_hashing",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/01_arrays_and_hashing/string_to_integer_(atoi).cpp",
+      "note_file": "notes/string_to_integer_(atoi)-solved.md"
+    },
+    {
+      "slug": "combination_sum",
+      "title": "Combination Sum",
+      "difficulty": "Medium",
+      "topic": "09_backtracking",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/09_backtracking/combination_sum.cpp",
+      "note_file": "notes/combination_sum-solved.md"
+    },
+    {
+      "slug": "next_permutation",
+      "title": "Next Permutation",
+      "difficulty": "Medium",
+      "topic": "01_arrays_and_hashing",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/01_arrays_and_hashing/next_permutation.cpp",
+      "note_file": "notes/next_permutation-solved.md"
+    },
+    {
+      "slug": "edit_distance",
+      "title": "Edit Distance",
+      "difficulty": "Hard",
+      "topic": "14_2d_dynamic_programming",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/14_2d_dynamic_programming/edit_distance.cpp",
+      "note_file": "notes/edit_distance-solved.md"
+    },
+    {
+      "slug": "4sum",
+      "title": "4Sum",
+      "difficulty": "Medium",
+      "topic": "02_two_pointers",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/02_two_pointers/4sum.cpp",
+      "note_file": "notes/4sum-solved.md"
+    },
+    {
+      "slug": "populating_next_right_pointers_in_each_node",
+      "title": "Populating Next Right Pointers in Each Node",
+      "difficulty": "Medium",
+      "topic": "07_trees",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/07_trees/populating_next_right_pointers_in_each_node.cpp",
+      "note_file": "notes/populating_next_right_pointers_in_each_node-solved.md"
+    },
+    {
+      "slug": "palindrome_partitioning",
+      "title": "Palindrome Partitioning",
+      "difficulty": "Medium",
+      "topic": "09_backtracking",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/09_backtracking/palindrome_partitioning.cpp",
+      "note_file": "notes/palindrome_partitioning-solved.md"
+    },
+    {
+      "slug": "find_median_from_data_stream",
+      "title": "Find Median from Data Stream",
+      "difficulty": "Hard",
+      "topic": "12_heap_priority_queue",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/12_heap_priority_queue/find_median_from_data_stream.cpp",
+      "note_file": "notes/find_median_from_data_stream-solved.md"
+    },
+    {
+      "slug": "next_greater_element_i",
+      "title": "Next Greater Element I",
+      "difficulty": "Easy",
+      "topic": "04_stack",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/04_stack/next_greater_element_i.cpp",
+      "note_file": "notes/next_greater_element_i-solved.md"
+    },
+    {
+      "slug": "cheapest_flights_within_k_stops",
+      "title": "Cheapest Flights Within K Stops",
+      "difficulty": "Medium",
+      "topic": "11_advanced_graphs",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/11_advanced_graphs/cheapest_flights_within_k_stops.cpp",
+      "note_file": "notes/cheapest_flights_within_k_stops-solved.md"
+    },
+    {
+      "slug": "subarray_sum_equals_k",
+      "title": "Subarray Sum Equals K",
+      "difficulty": "Medium",
+      "topic": "01_arrays_and_hashing",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/01_arrays_and_hashing/subarray_sum_equals_k.cpp",
+      "note_file": "notes/subarray_sum_equals_k-solved.md"
+    },
+    {
+      "slug": "network_delay_time",
+      "title": "Network Delay Time",
+      "difficulty": "Medium",
+      "topic": "11_advanced_graphs",
+      "companies": [
+        "Uber",
+        "Google",
+        "TikTok"
+      ],
+      "date_solved": "2026-07-20",
+      "stage": 1,
+      "review_date": "2026-07-21",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/11_advanced_graphs/network_delay_time.cpp",
+      "note_file": "notes/network_delay_time-solved.md"
+    }
+  ],
+  "stats": {
+    "total_solved": 3,
+    "easy": 1,
+    "medium": 2,
+    "hard": 0
+  },
+  "leetcode_stats": {
+    "total_solved": 479,
+    "easy": 134,
+    "medium": 266,
+    "hard": 79,
+    "ranking": 217972
+  }
+}
