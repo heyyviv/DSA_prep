@@ -73,7 +73,12 @@ def save_data(data):
 def slugify(title):
     return title.lower().strip().replace(" ", "_").replace("-", "_")
 
-def fetch_leetcode_profile(username=LEETCODE_USERNAME):
+def fetch_leetcode_profile(username=None):
+    if not username:
+        try:
+            username = load_data().get("leetcode_user", LEETCODE_USERNAME)
+        except Exception:
+            username = LEETCODE_USERNAME
     url = f"https://leetcode-api-faisalshohag.vercel.app/{username}"
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -116,7 +121,8 @@ def calculate_next_review(stage, rating, is_graduated):
 
 def cmd_status(args):
     data = load_data()
-    lc = fetch_leetcode_profile(LEETCODE_USERNAME)
+    username = data.get("leetcode_user", LEETCODE_USERNAME)
+    lc = fetch_leetcode_profile(username)
     
     if lc:
         data["leetcode_stats"] = {
@@ -134,7 +140,7 @@ def cmd_status(args):
     overdue = [p for p in problems if p.get("review_date", "9999-99-99") <= today_str]
 
     print("\n" + "="*60)
-    print(f" 🏆 LEETCODE PROFILE & SRS DASHBOARD FOR @{LEETCODE_USERNAME}")
+    print(f" 🏆 LEETCODE PROFILE & SRS DASHBOARD FOR @{username}")
     print("="*60)
     print(f"LeetCode Total Solved: {lc_stats.get('total_solved', 479)} | Global Rank: #{lc_stats.get('ranking', 217972):,}")
     print(f"LeetCode Breakdown:    🟢 Easy: {lc_stats.get('easy', 134)} | 🟡 Medium: {lc_stats.get('medium', 266)} | 🔴 Hard: {lc_stats.get('hard', 79)}")
@@ -164,13 +170,14 @@ def cmd_status(args):
     print("="*60 + "\n")
 
 def cmd_sync_leetcode(args):
-    print(f"🔄 Syncing recent accepted submissions from LeetCode (@{LEETCODE_USERNAME})...")
-    lc = fetch_leetcode_profile(LEETCODE_USERNAME)
+    data = load_data()
+    username = data.get("leetcode_user", LEETCODE_USERNAME)
+    print(f"🔄 Syncing recent accepted submissions from LeetCode (@{username})...")
+    lc = fetch_leetcode_profile(username)
     if not lc:
         print("❌ Could not connect to LeetCode API.")
         return
 
-    data = load_data()
     data["leetcode_stats"] = {
         "total_solved": lc.get("totalSolved", 479),
         "easy": lc.get("easySolved", 134),
@@ -351,6 +358,45 @@ def cmd_review(args):
     save_data(data)
     print("✅ Session saved!\n")
 
+def cmd_dashboard(args):
+    import http.server
+    import socketserver
+    import webbrowser
+    import threading
+    import time
+    
+    os.chdir(ROOT_DIR)
+    PORT = 8000
+    while True:
+        try:
+            socketserver.TCPServer.allow_reuse_address = True
+            server = socketserver.TCPServer(("", PORT), http.server.SimpleHTTPRequestHandler)
+            break
+        except OSError:
+            PORT += 1
+            if PORT > 8100:
+                print("❌ Error: Could not find an open port between 8000 and 8100.")
+                return
+
+    url = f"http://localhost:{PORT}/dashboard/index.html"
+    print("\n" + "="*60)
+    print(f" 🚀 LAUNCHING VISUAL DASHBOARD AT: {url}")
+    print("="*60)
+    print(" Serving local project files safely (bypassing browser CORS restrictions).")
+    print(" Press Ctrl+C to shut down the server.\n")
+
+    def open_browser():
+        time.sleep(0.5)
+        webbrowser.open(url)
+
+    threading.Thread(target=open_browser, daemon=True).start()
+
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\n👋 Dashboard server stopped.")
+        server.server_close()
+
 def main():
     parser = argparse.ArgumentParser(description="DSA Prep CLI & SRS Engine")
     subparsers = parser.add_subparsers(dest="command")
@@ -365,6 +411,7 @@ def main():
     parser_add.add_argument("--companies", default="Meta,Google", help="Comma-separated company names")
 
     subparsers.add_parser("review", help="Run SRS review session")
+    subparsers.add_parser("dashboard", help="Launch visual dashboard local server")
 
     args = parser.parse_args()
 
@@ -376,6 +423,8 @@ def main():
         cmd_add(args)
     elif args.command == "review":
         cmd_review(args)
+    elif args.command == "dashboard":
+        cmd_dashboard(args)
     else:
         cmd_status(args)
 

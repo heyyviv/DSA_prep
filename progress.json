@@ -1,5 +1,13 @@
 {
-  "last_updated": "2026-07-20",
+  "leetcode_user": "vivekdas2023",
+  "last_updated": "2026-07-24",
+  "leetcode_stats": {
+    "total_solved": 480,
+    "easy": 133,
+    "medium": 268,
+    "hard": 79,
+    "ranking": 217767
+  },
   "problems": [
     {
       "slug": "two_sum",
@@ -284,6 +292,25 @@
       "graduated": false,
       "cpp_file": "topics/11_advanced_graphs/network_delay_time.cpp",
       "note_file": "notes/network_delay_time-solved.md"
+    },
+    {
+      "slug": "longest_repeating_character_replacement",
+      "title": "Longest Repeating Character Replacement",
+      "difficulty": "Medium",
+      "topic": "03_sliding_window",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-07-22",
+      "stage": 1,
+      "review_date": "2026-07-23",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/03_sliding_window/longest_repeating_character_replacement.cpp",
+      "note_file": "notes/longest_repeating_character_replacement-solved.md"
     }
   ],
   "stats": {
@@ -291,12 +318,5 @@
     "easy": 1,
     "medium": 2,
     "hard": 0
-  },
-  "leetcode_stats": {
-    "total_solved": 479,
-    "easy": 134,
-    "medium": 266,
-    "hard": 79,
-    "ranking": 217972
   }
 }

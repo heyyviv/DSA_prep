@@ -51,6 +51,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function renderDashboard(data) {
+    const username = data.leetcode_user || 'leetcode_user';
+    const userElement = document.querySelector('.user-name');
+    if (userElement) {
+        userElement.innerText = '@' + username;
+    }
+    const avatarElement = document.querySelector('.avatar');
+    if (avatarElement) {
+        avatarElement.innerText = getInitials(username);
+    }
+
     const lc = data.leetcode_stats || { total_solved: 479, easy: 134, medium: 266, hard: 79, ranking: 217972 };
     
     document.getElementById('lc-total-solved').innerText = lc.total_solved || 479;
@@ -177,4 +187,19 @@ function renderProblemsTable(problems) {
         `;
         tbody.appendChild(tr);
     });
+}
+
+function getInitials(username) {
+    if (!username) return 'LC';
+    let clean = username.replace(/[^a-zA-Z0-9]/g, ' ');
+    let words = clean.trim().split(/\s+/);
+    if (words.length >= 2) {
+        return (words[0][0] + words[1][0]).toUpperCase();
+    }
+    let name = words[0];
+    let caps = name.replace(/[^A-Z]/g, '');
+    if (caps.length >= 2) {
+        return caps.slice(0, 2);
+    }
+    return name.slice(0, 2).toUpperCase();
 }

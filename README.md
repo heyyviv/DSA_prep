@@ -6,6 +6,16 @@ Powered by an **Anki-style Spaced Repetition Engine (SRS)**, a **MAANG Socratic 
 
 ---
 
+## ⚙️ Quick Onboarding Setup
+
+If you have just cloned this repository, run the setup wizard to connect your LeetCode account:
+```bash
+python3 setup.py
+```
+This script will configure your username, verify your stats, clear or retain sample problems, and fetch recent accepted submissions.
+
+---
+
 ## ⚡ Quick Start & Available Commands
 
 ### 🤖 Inside Chat Agent (Slash Commands & Prompt Shortcuts)
@@ -32,8 +42,13 @@ python3 scripts/dsa.py review
 
 ## 📊 Interactive Web Dashboard
 
-Launch the local visual dashboard in your browser:
-- Open [`dashboard/index.html`](file:///Users/vivekdas/Desktop/notebooks/DSA_prep/dashboard/index.html) to view stats, filterable problem tables, revision calendars, and pattern heatmaps.
+To bypass modern browser CORS restrictions (which block local data loading when opening raw HTML files via `file://`), run the built-in lightweight server:
+
+```bash
+python3 scripts/dsa.py dashboard
+```
+
+This will automatically start a local server and open your default browser to view statistics, filterable problem tables, revision calendars, and pattern heatmaps.
 
 ---
 

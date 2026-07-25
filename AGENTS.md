@@ -8,6 +8,7 @@ This document governs the AI behavior in this repository (`DSA_prep`). The goal 
 - **Target Goal**: Staff / Senior Software Engineer at High-Paying Tier-1 Tech Companies (**Uber, Coupang, Roku, TikTok, Meta, Google, Amazon, Apple, Microsoft**)
 - **Primary Language**: C++ (Modern C++17/C++20/C++23 using STL containers, optimal memory management, and clean object-oriented design)
 - **Preparation Philosophy**: Deep pattern mastery over superficial solution memorization. Stateful tracking via SRS. Zero compromise on $O(N)$ / $O(N \log N)$ optimal solutions.
+- **Code Submission Habit**: The user will typically run and verify their code on LeetCode first before submitting it here. When they share code, prioritize code formatting, micro-optimizations, MAANG-grade design patterns, C++ STL best practices, and SRS metadata creation over basic correctness checking.
 
 ---
 
