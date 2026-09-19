@@ -1,6 +1,6 @@
 {
   "leetcode_user": "vivekdas2023",
-  "last_updated": "2026-07-24",
+  "last_updated": "2026-09-18",
   "leetcode_stats": {
     "total_solved": 480,
     "easy": 133,
@@ -311,6 +311,196 @@
       "graduated": false,
       "cpp_file": "topics/03_sliding_window/longest_repeating_character_replacement.cpp",
       "note_file": "notes/longest_repeating_character_replacement-solved.md"
+    },
+    {
+      "slug": "capacity_to_ship_packages_within_d_days",
+      "title": "Capacity To Ship Packages Within D Days",
+      "difficulty": "Medium",
+      "topic": "05_binary_search",
+      "companies": [
+        "Amazon",
+        "Google",
+        "Meta"
+      ],
+      "date_solved": "2026-08-30",
+      "stage": 1,
+      "review_date": "2026-08-31",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/05_binary_search/capacity_to_ship_packages_within_d_days.cpp",
+      "note_file": "notes/capacity_to_ship_packages_within_d_days-solved.md"
+    },
+    {
+      "slug": "copy_list_with_random_pointer",
+      "title": "Copy List with Random Pointer",
+      "difficulty": "Medium",
+      "topic": "06_linked_list",
+      "companies": [
+        "Meta",
+        "Amazon",
+        "Microsoft"
+      ],
+      "date_solved": "2026-08-30",
+      "stage": 1,
+      "review_date": "2026-08-31",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/06_linked_list/copy_list_with_random_pointer.cpp",
+      "note_file": "notes/copy_list_with_random_pointer-solved.md"
+    },
+    {
+      "slug": "decode_ways",
+      "title": "Decode Ways",
+      "difficulty": "Medium",
+      "topic": "13_1d_dynamic_programming",
+      "companies": [
+        "Amazon",
+        "Meta",
+        "Google"
+      ],
+      "date_solved": "2026-09-01",
+      "stage": 1,
+      "review_date": "2026-09-16",
+      "last_rating": "Okay",
+      "review_count": 2,
+      "graduated": false,
+      "cpp_file": "topics/13_1d_dynamic_programming/decode_ways.cpp",
+      "note_file": "notes/decode_ways-solved.md"
+    },
+    {
+      "slug": "design_add_and_search_words_data_structure",
+      "title": "Design Add and Search Words Data Structure",
+      "difficulty": "Medium",
+      "topic": "08_tries",
+      "companies": [
+        "Meta",
+        "Amazon",
+        "Google"
+      ],
+      "date_solved": "2026-09-03",
+      "stage": 1,
+      "review_date": "2026-09-04",
+      "last_rating": "Okay",
+      "review_count": 1,
+      "graduated": false,
+      "cpp_file": "topics/08_tries/design_add_and_search_words_data_structure.cpp",
+      "note_file": "notes/design_add_and_search_words_data_structure-solved.md"
+    },
+    {
+      "slug": "non_overlapping_intervals",
+      "title": "Non-overlapping Intervals",
+      "difficulty": "Medium",
+      "topic": "16_intervals",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-09-05",
+      "stage": 1,
+      "review_date": "2026-09-06",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/16_intervals/non_overlapping_intervals.cpp",
+      "note_file": "notes/non_overlapping_intervals-solved.md"
+    },
+    {
+      "slug": "jump_game",
+      "title": "Jump Game",
+      "difficulty": "Medium",
+      "topic": "15_greedy",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-09-05",
+      "stage": 1,
+      "review_date": "2026-09-06",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/15_greedy/jump_game.cpp",
+      "note_file": "notes/jump_game-solved.md"
+    },
+    {
+      "slug": "sum_of_two_integers",
+      "title": "Sum of Two Integers",
+      "difficulty": "Medium",
+      "topic": "18_bit_manipulation",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-09-06",
+      "stage": 1,
+      "review_date": "2026-09-07",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/18_bit_manipulation/sum_of_two_integers.cpp",
+      "note_file": "notes/sum_of_two_integers-solved.md"
+    },
+    {
+      "slug": "multiply_strings",
+      "title": "Multiply Strings",
+      "difficulty": "Medium",
+      "topic": "17_math_and_geometry",
+      "companies": [
+        "Meta",
+        "Amazon",
+        "Google"
+      ],
+      "date_solved": "2026-09-06",
+      "stage": 1,
+      "review_date": "2026-09-07",
+      "last_rating": "Okay",
+      "review_count": 1,
+      "graduated": false,
+      "cpp_file": "topics/17_math_and_geometry/multiply_strings.cpp",
+      "note_file": "notes/multiply_strings-solved.md"
+    },
+    {
+      "slug": "minimum_window_substring",
+      "title": "Minimum Window Substring",
+      "difficulty": "Hard",
+      "topic": "03_sliding_window",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-09-16",
+      "stage": 1,
+      "review_date": "2026-09-17",
+      "last_rating": "Okay",
+      "review_count": 1,
+      "graduated": false,
+      "cpp_file": "topics/03_sliding_window/minimum_window_substring.cpp",
+      "note_file": "notes/minimum_window_substring-solved.md"
+    },
+    {
+      "slug": "serialize_and_deserialize_binary_tree",
+      "title": "Serialize and Deserialize Binary Tree",
+      "difficulty": "Hard",
+      "topic": "07_trees",
+      "companies": [
+        "Meta",
+        "Google",
+        "Amazon"
+      ],
+      "date_solved": "2026-09-18",
+      "stage": 1,
+      "review_date": "2026-09-19",
+      "last_rating": "New",
+      "review_count": 0,
+      "graduated": false,
+      "cpp_file": "topics/07_trees/serialize_and_deserialize_binary_tree.cpp",
+      "note_file": "notes/serialize_and_deserialize_binary_tree-solved.md"
     }
   ],
   "stats": {
