@@ -44,17 +44,23 @@ When a user reviews a problem (via `/review` or `/retry`), calculate the updated
 
 ---
 
-## 📋 Pattern Card Tracking Metadata Schema
+## 📋 Card Tracking Schema
 
-Every note in `notes/[problem_slug]-solved.md` must include this standardized tracking block at the bottom:
+SRS state lives **only** in `progress.json`, one entry per problem. Never write stage or review dates into `notes/*.md`; that copy would drift.
 
-```markdown
-## SRS Tracking
-- **Stage**: 1
-- **Review Date**: YYYY-MM-DD
-- **Last Rating**: -
-- **Review Count**: 0
-- **Graduated**: No
-- **Pattern Tag**: sliding-window
-- **Difficulty**: Medium
+```json
+{
+  "slug": "minimum_window_substring",
+  "title": "Minimum Window Substring",
+  "difficulty": "Hard",
+  "topic": "03_sliding_window",
+  "pattern": "variable-size-sliding-window",
+  "stage": 1,
+  "review_date": "YYYY-MM-DD",
+  "last_rating": "New | Strong | Okay | Weak | Blank",
+  "review_count": 0,
+  "graduated": false
+}
 ```
+
+When creating or updating a card, fill `pattern` with a specific kebab-case pattern slug (not the topic folder name).

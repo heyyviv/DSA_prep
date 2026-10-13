@@ -228,9 +228,7 @@ def cmd_sync_leetcode(args):
                                .replace("[Easy / Medium / Hard]", diff)\
                                .replace("[Topic Category]", topic)\
                                .replace("[Meta, Google, Amazon, Apple, Microsoft, Uber]", "Meta, Google, Amazon")\
-                               .replace("YYYY-MM-DD", today_str)\
-                               .replace("Pattern Tag: [pattern-slug]", f"Pattern Tag: {topic}")\
-                               .replace("Review Date: YYYY-MM-DD", f"Review Date: {next_review}")
+                               .replace("YYYY-MM-DD", today_str)
                 with open(note_filepath, "w") as f:
                     f.write(note_md)
 
@@ -239,6 +237,7 @@ def cmd_sync_leetcode(args):
                 "title": title,
                 "difficulty": diff,
                 "topic": topic,
+                "pattern": "",
                 "companies": ["Meta", "Google", "Amazon"],
                 "date_solved": today_str,
                 "stage": 1,
@@ -291,9 +290,7 @@ def cmd_add(args):
                                .replace("[Easy / Medium / Hard]", difficulty)\
                                .replace("[Topic Category]", topic)\
                                .replace("[Meta, Google, Amazon, Apple, Microsoft, Uber]", ", ".join(companies))\
-                               .replace("YYYY-MM-DD", today_str)\
-                               .replace("Pattern Tag: [pattern-slug]", f"Pattern Tag: {topic}")\
-                               .replace("Review Date: YYYY-MM-DD", f"Review Date: {next_review}")
+                               .replace("YYYY-MM-DD", today_str)
         with open(note_filepath, "w") as f:
             f.write(note_md)
         print(f"✅ Created Pattern Card Note: {note_filepath}")
@@ -303,6 +300,7 @@ def cmd_add(args):
         "title": title,
         "difficulty": difficulty,
         "topic": topic,
+        "pattern": "",
         "companies": companies,
         "date_solved": today_str,
         "stage": 1,
@@ -320,17 +318,47 @@ def cmd_add(args):
     save_data(data)
     print(f"🎉 Problem '{title}' successfully added and scheduled for SRS review ({next_review})!\n")
 
+MAX_SESSION_CARDS = 5
+MAX_CARDS_PER_PATTERN = 2
+
+def build_review_queue(problems, today_str):
+    """Due cards ordered Blank -> Weak -> Due Today -> Overdue (oldest first), capped per pattern."""
+    due = [p for p in problems if p.get("review_date", "9999-99-99") <= today_str]
+
+    def priority(p):
+        rating = p.get("last_rating", "").lower()
+        if rating == "blank":
+            bucket = 0
+        elif rating == "weak":
+            bucket = 1
+        elif p["review_date"] == today_str:
+            bucket = 2
+        else:
+            bucket = 3
+        return (bucket, p["review_date"])
+
+    queue, per_pattern = [], {}
+    for p in sorted(due, key=priority):
+        tag = p.get("pattern") or p.get("topic")
+        if per_pattern.get(tag, 0) >= MAX_CARDS_PER_PATTERN:
+            continue
+        per_pattern[tag] = per_pattern.get(tag, 0) + 1
+        queue.append(p)
+        if len(queue) == MAX_SESSION_CARDS:
+            break
+    return due, queue
+
 def cmd_review(args):
     data = load_data()
     today_str = datetime.now().strftime("%Y-%m-%d")
-    overdue = [p for p in data["problems"] if p.get("review_date", "9999-99-99") <= today_str]
+    overdue, queue = build_review_queue(data["problems"], today_str)
 
     if not overdue:
         print("\n✨ No problems currently due for review today! Enjoy your prep.\n")
         return
 
-    print(f"\n🧠 SRS REVISION SESSION ({len(overdue)} card(s) due)\n" + "="*50)
-    for p in overdue[:5]:
+    print(f"\n🧠 SRS REVISION SESSION ({len(queue)} of {len(overdue)} due card(s))\n" + "="*50)
+    for p in queue:
         print(f"\n📌 Problem: {p['title']} [{p['difficulty']}] (Stage {p['stage']})")
         print(f"   Note File: {p['note_file']}")
         print(f"   C++ File:  {p['cpp_file']}")

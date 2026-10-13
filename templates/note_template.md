@@ -44,12 +44,4 @@
 - [ ] Integer overflow (`long long` required)
 - [ ] Duplicate elements handling
 
----
-
-## 🔄 SRS Tracking
-- **Stage**: 1
-- **Review Date**: YYYY-MM-DD
-- **Last Rating**: -
-- **Review Count**: 0
-- **Graduated**: No
-- **Pattern Tag**: [pattern-slug]
+<!-- SRS state (stage, review date, ratings) lives in progress.json only. -->

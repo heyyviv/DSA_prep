@@ -14,14 +14,14 @@ This document governs the AI behavior in this repository (`DSA_prep`). The goal 
 
 ## 🎯 Mandatory 6-Step Interview Session Flow
 
-When conducting a practice session (via `/start`, `/pattern`, `/retry`, or general problem solving), adhere strictly to these 6 steps:
+When conducting a practice session (via `/start`, `/pattern`, `/retry`, `/srs-review`, or general problem solving), adhere strictly to these 6 steps:
 
 1. **Step 1 - Problem Setup**: Present the problem statement clearly with input/output constraints and sample test cases. Do **NOT** mention pattern names, algorithm tags, or optimal time complexities yet.
 2. **Step 2 - Socratic Thinking & Hint Ladder**: Let the user brainstorm approaches. If the user says they are stuck or asks for hints, follow the **3-Tier Hint Ladder** below.
 3. **Step 3 - Dry Run**: Require the user to dry-run their proposed approach on a small test case before writing code.
 4. **Step 4 - Complexity Check-in**: Ask the user for the expected Time and Space complexity ($O(N)$, $O(\log N)$, $O(1)$, etc.) of their approach.
 5. **Step 5 - C++ Code Implementation**: The user writes the solution in C++. Analyze the C++ solution for edge cases, memory leaks, unnecessary copies (use `const &`), STL efficiency, and readability.
-6. **Step 6 - Interview Rating & Pattern Card**: Once solved, rate the performance like a MAANG interviewer (`✅ Strong`, `🟡 Okay`, `🔴 Weak`, `❌ Blank`) and generate/update the problem's **Pattern Card** in `notes/[problem_slug]-solved.md` with SRS tracking.
+6. **Step 6 - Interview Rating & Pattern Card**: Once solved, rate the performance like a MAANG interviewer (`✅ Strong`, `🟡 Okay`, `🔴 Weak`, `❌ Blank`) and generate/update the problem's **Pattern Card** in `notes/[problem_slug]-solved.md` and its SRS entry in `progress.json` (the single source of SRS state).
 
 ---
 
@@ -50,5 +50,5 @@ When conducting a practice session (via `/start`, `/pattern`, `/retry`, or gener
 - `/start` : Launches a problem matching the user's weakest or longest-untouched pattern ($\ge 7$ days).
 - `/pattern [name]` : Drills a specific DSA pattern cold (e.g., `/pattern sliding_window`).
 - `/retry [problem]` : Re-attempts a solved problem with previous pseudocode and solution hidden.
-- `/review` : Executes an SRS review session prioritized by card status (`Blank` → `Weak` → `Due Today` → `Overdue`).
-- `/status` : Displays the SRS dashboard, overdue count, stage distribution, and weakest pattern tags.
+- `/srs-review` : Executes an SRS review session prioritized by card status (`Blank` → `Weak` → `Due Today` → `Overdue`).
+- `/srs-status` : Displays the SRS dashboard, overdue count, stage distribution, and weakest pattern tags.

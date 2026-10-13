@@ -22,8 +22,8 @@ This script will configure your username, verify your stats, clear or retain sam
 - `/start` : Finds patterns untouched for $\ge 7$ days or overdue review problems and starts a mock session.
 - `/pattern [name]` : Drill a specific pattern cold (e.g. `/pattern sliding_window` or `/pattern topological_sort`).
 - `/retry [problem]` : Re-attempt a previously solved problem with code hidden to verify true retention.
-- `/review` : Launch an SRS spaced repetition session (Priority: Blank → Weak → Due Today → Overdue).
-- `/status` : View overall prep statistics, stage distribution, and weakest pattern tags.
+- `/srs-review` : Launch an SRS spaced repetition session (Priority: Blank → Weak → Due Today → Overdue).
+- `/srs-status` : View overall prep statistics, stage distribution, and weakest pattern tags.
 
 ### 💻 Command Line Interface (CLI Helper)
 Run commands directly in your terminal:
@@ -81,10 +81,9 @@ DSA_prep/
 ├── AGENTS.md                          # Project Constitution & Interviewer Persona
 ├── README.md                          # Dashboard Homepage
 ├── progress.json                      # Stateful Database for Problems & SRS Metadata
-├── .agents/                           # Agent Customizations & Skills
-│   └── skills/
-│       ├── srs-revision-coach/        # Anki Spaced Repetition Engine
-│       └── dsa-session-runner/        # Slash Commands Execution Skill
+├── .claude/skills/                   # Slash commands (/start, /pattern, /retry, /srs-review, /srs-status)
+│   └── srs-revision-coach/            # Anki Spaced Repetition Engine
+├── .agents/skills -> .claude/skills   # Symlink for other agent tools
 ├── templates/
 │   ├── solution_template.cpp          # C++ Starter Template with Fast I/O & STL
 │   └── note_template.md               # Pattern Card & Mental Model Matrix Template

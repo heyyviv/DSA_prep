@@ -1,12 +1,12 @@
 {
   "leetcode_user": "vivekdas2023",
-  "last_updated": "2026-09-18",
+  "last_updated": "2026-10-13",
   "leetcode_stats": {
-    "total_solved": 480,
+    "total_solved": 481,
     "easy": 133,
     "medium": 268,
-    "hard": 79,
-    "ranking": 217767
+    "hard": 80,
+    "ranking": 231510
   },
   "problems": [
     {
@@ -14,6 +14,7 @@
       "title": "Two Sum",
       "difficulty": "Easy",
       "topic": "01_arrays_and_hashing",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -33,6 +34,7 @@
       "title": "Course Schedule",
       "difficulty": "Medium",
       "topic": "10_graphs",
+      "pattern": "",
       "companies": [
         "Meta",
         "Amazon",
@@ -52,6 +54,7 @@
       "title": "Nested List Weight Sum II",
       "difficulty": "Medium",
       "topic": "07_trees",
+      "pattern": "",
       "companies": [
         "LinkedIn",
         "Meta"
@@ -70,6 +73,7 @@
       "title": "String to Integer (atoi)",
       "difficulty": "Medium",
       "topic": "01_arrays_and_hashing",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -89,6 +93,7 @@
       "title": "Combination Sum",
       "difficulty": "Medium",
       "topic": "09_backtracking",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -108,6 +113,7 @@
       "title": "Next Permutation",
       "difficulty": "Medium",
       "topic": "01_arrays_and_hashing",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -127,6 +133,7 @@
       "title": "Edit Distance",
       "difficulty": "Hard",
       "topic": "14_2d_dynamic_programming",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -146,6 +153,7 @@
       "title": "4Sum",
       "difficulty": "Medium",
       "topic": "02_two_pointers",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -165,6 +173,7 @@
       "title": "Populating Next Right Pointers in Each Node",
       "difficulty": "Medium",
       "topic": "07_trees",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -184,6 +193,7 @@
       "title": "Palindrome Partitioning",
       "difficulty": "Medium",
       "topic": "09_backtracking",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -203,6 +213,7 @@
       "title": "Find Median from Data Stream",
       "difficulty": "Hard",
       "topic": "12_heap_priority_queue",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -222,6 +233,7 @@
       "title": "Next Greater Element I",
       "difficulty": "Easy",
       "topic": "04_stack",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -241,6 +253,7 @@
       "title": "Cheapest Flights Within K Stops",
       "difficulty": "Medium",
       "topic": "11_advanced_graphs",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -260,6 +273,7 @@
       "title": "Subarray Sum Equals K",
       "difficulty": "Medium",
       "topic": "01_arrays_and_hashing",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -268,7 +282,7 @@
       "date_solved": "2026-07-20",
       "stage": 1,
       "review_date": "2026-07-21",
-      "last_rating": "New",
+      "last_rating": "Okay",
       "review_count": 0,
       "graduated": false,
       "cpp_file": "topics/01_arrays_and_hashing/subarray_sum_equals_k.cpp",
@@ -279,6 +293,7 @@
       "title": "Network Delay Time",
       "difficulty": "Medium",
       "topic": "11_advanced_graphs",
+      "pattern": "",
       "companies": [
         "Uber",
         "Google",
@@ -287,7 +302,7 @@
       "date_solved": "2026-07-20",
       "stage": 1,
       "review_date": "2026-07-21",
-      "last_rating": "New",
+      "last_rating": "Strong",
       "review_count": 0,
       "graduated": false,
       "cpp_file": "topics/11_advanced_graphs/network_delay_time.cpp",
@@ -298,6 +313,7 @@
       "title": "Longest Repeating Character Replacement",
       "difficulty": "Medium",
       "topic": "03_sliding_window",
+      "pattern": "",
       "companies": [
         "Meta",
         "Google",
@@ -317,6 +333,7 @@
       "title": "Capacity To Ship Packages Within D Days",
       "difficulty": "Medium",
       "topic": "05_binary_search",
+      "pattern": "binary-search-on-answer",
       "companies": [
         "Amazon",
         "Google",
@@ -336,6 +353,7 @@
       "title": "Copy List with Random Pointer",
       "difficulty": "Medium",
       "topic": "06_linked_list",
+      "pattern": "hash-map-clone-mapping",
       "companies": [
         "Meta",
         "Amazon",
@@ -355,6 +373,7 @@
       "title": "Decode Ways",
       "difficulty": "Medium",
       "topic": "13_1d_dynamic_programming",
+      "pattern": "top-down-dp",
       "companies": [
         "Amazon",
         "Meta",
@@ -374,6 +393,7 @@
       "title": "Design Add and Search Words Data Structure",
       "difficulty": "Medium",
       "topic": "08_tries",
+      "pattern": "trie-wildcard-dfs",
       "companies": [
         "Meta",
         "Amazon",
@@ -393,6 +413,7 @@
       "title": "Non-overlapping Intervals",
       "difficulty": "Medium",
       "topic": "16_intervals",
+      "pattern": "greedy-interval-selection",
       "companies": [
         "Meta",
         "Google",
@@ -412,6 +433,7 @@
       "title": "Jump Game",
       "difficulty": "Medium",
       "topic": "15_greedy",
+      "pattern": "greedy-goal-tracking",
       "companies": [
         "Meta",
         "Google",
@@ -431,6 +453,7 @@
       "title": "Sum of Two Integers",
       "difficulty": "Medium",
       "topic": "18_bit_manipulation",
+      "pattern": "bitwise-addition",
       "companies": [
         "Meta",
         "Google",
@@ -450,6 +473,7 @@
       "title": "Multiply Strings",
       "difficulty": "Medium",
       "topic": "17_math_and_geometry",
+      "pattern": "grade-school-string-multiplication",
       "companies": [
         "Meta",
         "Amazon",
@@ -469,6 +493,7 @@
       "title": "Minimum Window Substring",
       "difficulty": "Hard",
       "topic": "03_sliding_window",
+      "pattern": "variable-size-sliding-window",
       "companies": [
         "Meta",
         "Google",
@@ -488,6 +513,7 @@
       "title": "Serialize and Deserialize Binary Tree",
       "difficulty": "Hard",
       "topic": "07_trees",
+      "pattern": "level-order-tree-encoding",
       "companies": [
         "Meta",
         "Google",
